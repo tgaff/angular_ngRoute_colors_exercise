@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="routingApp">
+<head>
+  <title>60475</title>
+  <meta charset="utf8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-route.js"></script>
+
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+  <h2 class="text-center">Goats and colors</h2>
+  <ol>
+    <li>
+      Copy paste the following script tag into the &lt;head&gt; tag:</br>
+      <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"&gt;&lt;/script&gt;</code>
+    </li>
+    <li>
+      Add the attribute "ng-app" to the html tag, like so:</br>
+      <code>&lt;html ng-app="routingApp"&gt;</code>
+    </li>
+    <li>
+      You should see a nasty error message in your console now: </br>
+      <span class="text-danger">Failed to instantiate module ...</span></br>
+      Let's add the following code to make it go away (js/app.js): </br>
+      <code>
+        angular.module("routingApp", [])
+      </code>
+    </li>
+    <li>
+      This box will be checked if angular is working: <input type="checkbox" disabled ng-checked="true">
+    </li>
+    <li>
+      Now add ngRoute.  First add the script tag:
+      <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.js"&gt;&lt;/script&gt;</code>
+    </li>
+    <li>
+      Then include it in your angular app.
+      <code>
+        angular.module("routingApp", ['ngRoute'])
+      </code>
+    </li>
+    <li>
+      Finally connect the config function to the angular app.
+      <br>
+      <code>
+      angular.module("routingApp", [])<br>
+        .config(config)
+        .controller('GoatsCon...
+      </code>
+    </li>
+    <li>
+      Then add the view in to the #make-me-an-ng-view div below.
+    </li>
+  </ol>
+
+  <br>
+  <br>
+
+
+  <section class="exercises">
+    <h4>Exercise #1: Place view here</h4>
+    <!-- assign template view to below div -->
+    <div id="make-me-an-ng-view" ng-view>
+      <strong>Yarr!  Why thar no view (goat) here?</strong>
+    </div>
+  </section>
+
+</body>
+</html>
